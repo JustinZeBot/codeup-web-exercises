@@ -40,6 +40,8 @@ isNaN("")
 false
 'for '+(mermaid+bear+hercules) + ' days i will have to pay ' +(mermaid+bear+hercules)*price + ' dollars'
 'for 7 days i will have to pay 21 dollars'
+
+
 var google=400, amazon=380, facebook=350
 undefined
 (facebook*10) + (amazon*4) + (google*6)
