@@ -9,10 +9,10 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(username){     //must be string, can be fixed?
-     return("hello, " + username)
-}
-console.log(sayHello())
+// function sayHello(username){     //must be string, can be fixed?
+//      return("hello, " + username)
+// }
+// console.log(sayHello('justin.E'));
 
 /**
  * TODO:
@@ -22,7 +22,7 @@ console.log(sayHello())
  * console.log 'helloMessage' to check your work
  */
 
-console.log(sayHello('justin'))
+// console.log(sayHello('justin'));
 
 
 /**
@@ -32,15 +32,15 @@ console.log(sayHello('justin'))
  * console.
  */
 
-var myName = 'Justin'
-console.log(sayHello(myName))
-
-
-
-
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var myName = 'Justin'
+// console.log(sayHello(myName));
+//
+//
+//
+//
+// // Don't modify the following line, it generates a random number between 1 and 3
+// // and stores it in a variable named random
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -60,14 +60,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(variabel1){
-    return (variabel1) === 2
-}
-
-console.log(isTwo(random))
-console.log(isTwo(random+1))
-console.log(isTwo(random+3))//can never be 2
-console.log(isTwo(random-4))//can never be 2
+// function isTwo(variable1){
+//     return (variable1) === 2
+// }
+//
+// console.log(isTwo(random));
+// console.log(isTwo(random+1));
+// console.log(isTwo(random+3));//can never be 2
+// console.log(isTwo(random-4));//can never be 2
 
 
 
@@ -84,14 +84,14 @@ console.log(isTwo(random-4))//can never be 2
  */
 
 
-function calculateTip(tipPercent,totalBill){
-    return (tipPercent * totalBill)
-}
-
-console.log(calculateTip(.25,20)+' total tip')// 5
-console.log(calculateTip(.1,50))// 5
-console.log(calculateTip(.3,200))// 5
-console.log(calculateTip(.25,217))// 5
+// function calculateTip(tipPercent,totalBill){
+//     return (tipPercent * totalBill)
+// }
+//
+// console.log(calculateTip(.25,20)+' total tip')// 5
+// console.log(calculateTip(.1,50))// 5
+// console.log(calculateTip(.3,200))// 5
+// console.log(calculateTip(.25,217))// 5
 
 
 
@@ -101,11 +101,18 @@ console.log(calculateTip(.25,217))// 5
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
-
-
-
-
+// function calculateTipPrompt(){
+//
+//
+//     var tippercent =parseFloat(prompt('what is your tip percentage'))
+//     var totalBill = parseFloat(prompt('what was your total bill'))
+//     var finalTipAmount= tippercent * totalBill
+//     alert(' your tip will be ' + finalTipAmount)
+//
+// }
+//
+//
+// calculateTipPrompt()
 
 /**
  * TODO:
@@ -121,3 +128,17 @@ console.log(calculateTip(.25,217))// 5
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+// function applyDiscount() {
+//
+//
+//     var originalPrice = parseFloat(prompt('what is the price of your purchase'))
+//     var discountPercent = parseFloat(prompt('what was is the discount amount you are applying'))
+//     var discountTotal = (originalPrice * discountPercent)
+//     console.log(discountTotal)
+//     var FinalPrice = (originalPrice - discountTotal)
+//     alert(' your total after discount will be ' + FinalPrice)
+//     console.log(FinalPrice)
+// }
+//
+// applyDiscount()
