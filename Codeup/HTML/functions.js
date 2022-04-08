@@ -101,18 +101,18 @@
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-// function calculateTipPrompt(){
-//
-//
-//     var tippercent =parseFloat(prompt('what is your tip percentage'))
-//     var totalBill = parseFloat(prompt('what was your total bill'))
-//     var finalTipAmount= tippercent * totalBill
-//     alert(' your tip will be ' + finalTipAmount)
-//
-// }
-//
-//
-// calculateTipPrompt()
+function calculateTipPrompt(){
+
+
+    var tippercent =parseFloat(prompt('what is your tip percentage'))
+    var totalBill = parseFloat(prompt('what was your total bill'))
+    var finalTipAmount= tippercent * totalBill
+    alert(' your tip will be ' + finalTipAmount)
+
+}
+x
+
+calculateTipPrompt()
 
 /**
  * TODO:

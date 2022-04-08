@@ -22,6 +22,24 @@ console.log('sanity Check')
  * console.logging the function's return value
  */
 
+
+// function analyzeColor(colorInput1) {
+//     if(colorInput1 === 'blue'){
+//         console.log('wow! blue is my favorite color to!')
+//     }else if (colorInput1 === 'red'){
+//         console.log('Red is a pretty cool color to!')
+//     } else{
+//         console.log('sorry i dont like '+ colorInput1)
+//     }
+//
+// }
+
+// analyzeColor('blue')
+// analyzeColor('red')
+// analyzeColor('green')
+
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -35,10 +53,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+// analyzeColor(randomColor)
+
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+// var switchColorAnalyzer = prompt('What is your favorite color?')
+//
+// switch(switchColorAnalyzer) {
+//     case "red":
+//         alert('red is a very cool color! i like it!')
+//         console.log('red was input')
+//         break;
+//     case "blue":
+//         alert('blue! my favorit color!')
+//         console.log('blue was input')
+//         break;
+//     default:
+//         alert('sorry '+ switchColorAnalyzer + 'is not a color i like')
+//         console.log('another color other than red/blue was input')
+//         break;
+// }
+//
+
+
 
 /**
  * TODO:
@@ -46,6 +87,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+
+//accidentally did this in the last one as well!
 
 /* ########################################################################## */
 
@@ -68,6 +112,42 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+//enter RGN code here
+
+function calculateTotal(TotalBill,DiscountNumber){
+    if(DiscountNumber ===0){
+        return('Sorry, your number was not lucky. The Total is: '+parseFloat(TotalBill))
+    }else if(DiscountNumber ===1){
+        return('You got the bottom of the barrel. The discount is 10%, and the total is: '+ parseFloat(TotalBill-(TotalBill*.1)))      //10%
+    }else if(DiscountNumber ===2){
+        return('You were lucky! the discount is 25%, and the total is: ' + parseFloat(TotalBill-(TotalBill*.25)))               //25
+    }else if(DiscountNumber ===3){
+        return('You were lucky! the discount is 25%, and the total is: ' + parseFloat(TotalBill-(TotalBill*.35)))          //35
+    }else if(DiscountNumber ===4){
+        return('You were pretty lucky! the discount is 25%, and the total is: ' + parseFloat(TotalBill-(TotalBill*.5)))     //50
+    }else if(DiscountNumber ===5){
+        return('Jackpot!!! Your purchase is free for this transaction!')                             //free
+    }else {
+        console.log('the program did not like that, ensure numbers are 0-5')
+    }
+}
+
+
+
+
+
+
+
+console.log(calculateTotal(40,0))
+console.log(calculateTotal(40,1))
+console.log(calculateTotal(40,2))
+console.log(calculateTotal(40,3))
+console.log(calculateTotal(40,4))
+console.log(calculateTotal(40,5))
+
+
+
+
 
 /**
  * TODO:
@@ -78,8 +158,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+    var luckyNumber = Math.floor(Math.random() * 6);
 
+   console.log(calculateTotal(100,luckyNumber ))
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
