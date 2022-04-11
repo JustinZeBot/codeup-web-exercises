@@ -179,3 +179,33 @@ console.log(calculateTotal(40,5))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+function FinalExercise(userConfirm){
+      userConfirm = confirm('would you like to enter a number?')
+
+    if (userConfirm){
+            console.log('User wanted to add a number')
+            FinalExerciseMath()
+
+    }else {
+        console.log('User did not want to enter a number')
+    }
+}
+
+
+
+function FinalExerciseMath (userNumber){
+    userNumber = prompt('please enter a number')
+
+    if (isNaN (userNumber)){
+        console.log('number')
+    } else{
+        alert('you did not enter a valid number')
+    }
+
+}
+
+FinalExercise()
+
+
