@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for loops</title>
+</head>
+<body>
+<script>
+
+console.log('sanity Check')
+// =======================
+
+    // function showMultiplicationTable(input1){
+    //     for (multiplyIteration=1; multiplyIteration <11; multiplyIteration++){
+    //         multipleTotal = input1 * multiplyIteration
+    //         console.log(input1 + ' x ' + multiplyIteration+ ' = ' + multipleTotal)
+    //     }
+    //
+    // }
+    //
+    // showMultiplicationTable(6)
+    // showMultiplicationTable(7)
+    // showMultiplicationTable(42)
+    // showMultiplicationTable(2)
+
+// =======================
+//
+//     function randomIsOddorEven(){
+//     for(iterationcount=1; iterationcount<11; iterationcount++){
+//         randomnumber= Math.floor(Math.random()*200)
+//         if(randomnumber % 2){
+//             console.log(randomnumber + ' is odd')
+//
+//         }else{
+//             console.log(randomnumber+ ' is even')
+//         }
+//
+//     }
+//
+//
+//     }
+//
+//     randomIsOddorEven()
+//     randomIsOddorEven()
+// =======================
+
+// function doubleAdd(){
+//     for(iterationcount=1; iterationcount<10; iterationcount++){
+//
+//         console.log(iterationcount + (iterationcount*iterationcount))
+//
+//
+//
+//
+//     }
+// }
+//
+//
+// doubleAdd()
+
+//=====================
+
+
+// function countDownByFive(){
+//     for(startingNumber=100;startingNumber>0;startingNumber -=5){
+//     console.log(startingNumber)
+//     }
+//
+// }
+//
+// countDownByFive()
+
+
+//===================
+
+// function excludeOddNumber(input){
+//     for ( i =1; i < 50; i++){
+//         if(i % 2 ===0 ) {
+//             continue;
+//         }
+//         if(i == input ){
+//             console.log('This number is weird-' + i)
+//         }
+//
+//         console.log('here is an odd number:' + i);
+//     }
+//
+// }
+//
+// excludeOddNumber(prompt('which Odd number would you like to exclude?'))
+
+//========
+
+// function showLineOfNumber(){
+//     for (input=1; input<=9; input++){
+//         console.log(input.toString().repeat(input));
+//
+//     }
+// }
+// showLineOfNumber()
+
+//=========
+var totalCones = math.floor(Math.random()*50) +50;
+
+function generateSales(){
+    return Math.floor(Math.random()*5) +1;
+}
+function calculateTotalSales() {
+
+
+    do {
+    var totalTosell=generateSales();
+
+    var acutalSoldAmount=(totalCones >= totalTosell ? totalTosell : totalCones)
+
+        if(totalTosell === acutalSoldAmount){
+            console.log( acutalSoldAmount +' cones sold')
+        }else {
+            console.log('i dont have ' + totalTosell + 'to sell you, i only have ' + acutalSoldAmount)
+        }
+
+
+
+    } while(totalCones <=0);
+
+}
+calculateTotalSales()
+</script>
+
+</body>
+</html>

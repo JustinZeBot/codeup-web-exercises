@@ -110,7 +110,7 @@ function calculateTipPrompt(){
     alert(' your tip will be ' + finalTipAmount)
 
 }
-x
+
 
 calculateTipPrompt()
 
