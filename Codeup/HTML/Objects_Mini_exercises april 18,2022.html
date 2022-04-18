@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OBJECTS exercise</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // Create a few beverage objects and assign values to each object for the following properties:
+    //
+    //     - brandName
+    //     - type
+    //     - volumeInLiters
+    //     - priceInCents
+    //     - expirationDate
+    //     - datesOfPreviousSips (use an array of strings)
+    // - isOpen
+    //
+    // Define your objects using both literal syntax to create all properties
+    // and values at once and also try
+    // defining empty objects and assign property values in
+    // separate statements using the dot notation.
+// var allBeverages =
+    var beverage1 = {
+        brandName: 'Pepsi',
+        type: 'soda',
+        volumeInLiters: 2,
+        priceInCents: 350,
+        expirationDate: 'October272021',
+        datesOfPreviousSips:['april19','april20','april22'],
+        isOpen: false
+
+    }
+    var beverage2 = {
+        brandName: 'MilosTea',
+        type: 'blackTea',
+        volumeInGallons: 1,
+        priceInCents: 450,
+        expirationDate: 'July62021',
+        datesOfPreviousSips:['february5','february9'],
+        isOpen: true
+    }
+    var beverage3 = {
+        brandName: 'CocaCola',
+        type: 'soda',
+        volumeInLiters: 2,
+        priceInCents: 300,
+        expirationDate: 'September142021',
+        datesOfPreviousSips:['may4','may10','may12'],
+        isOpen: false
+    }
+    console.log(beverage1.brandName, beverage1.priceInCents)
+    console.log(beverage2)
+    console.log(beverage3)
+
+console.log()
+
+
+//================
+
+    // -- Mini Exercise 2
+
+    var users = [
+        {
+            givenName: 'Sam',
+            age: 21
+        },
+        {
+            givenName: 'Cathy',
+            age: 34
+        },
+        {
+            givenName: 'Karen',
+            age: 43
+        }
+    ];
+
+
+  var output = '';
+  users.forEach(function (users) {
+    output += users.givenName +' ';
+  });
+    console.log(output.trim());
+
+
+    //=======
+
+    // users.forEach(function (user){
+    //     user.age +=1;
+    //
+    //
+    // });
+    // console.log(users[0].age)
+    // console.log(users[1].age)
+    // console.log(users[2].age)
+
+
+    // 1. Log the names of all users in a single console log separated by spaces. // output = "Sam Cathy Karen"
+    // 2. Change the names of all users to "John Doe"
+    // 3. Increase the current age of all users by 1
+    //
+    // Can you accomplish each step using iteration?
+
+    var dog = {
+    petName: 'sparky',
+    age: 4,
+    bark: function(){
+        console.log('woof, woof');
+
+    },
+    eat: function(food){
+        console.log('dog is eating ' + food)
+    },
+
+
+    }
+    dog.bark();
+    dog.eat('steak')
+
+</script>
+
+</body>
+</html>
