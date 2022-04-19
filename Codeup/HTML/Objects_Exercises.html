@@ -104,7 +104,6 @@ console.log(books[0])
 
 
 
-
 //====================
     /**
      * TODO:
@@ -130,9 +129,11 @@ console.log(books[0])
      *      ---
      *      ...
      */
+    var i =0
 books.forEach(function(book){
-    var fullName = book.author.firstName + '' + book.author.lastName
-    console.log('book # ${index + 1)
+    i++
+    var fullName = book.author.firstName + ' ' + book.author.lastName
+    console.log('book #' + i)
     console.log('title: '+ book.title)
     console.log('author: '+ fullName)
 
