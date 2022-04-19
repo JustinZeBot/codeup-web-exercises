@@ -129,6 +129,12 @@ console.log(books[0])
      *      ---
      *      ...
      */
+
+
+
+
+
+
     var i =0
 books.forEach(function(book){
     i++
@@ -136,11 +142,7 @@ books.forEach(function(book){
     console.log('book #' + i)
     console.log('title: '+ book.title)
     console.log('author: '+ fullName)
-
-
-
-
-
+    console.log('=-=-=-=-=-=')
 
     })
 
@@ -157,9 +159,26 @@ books.forEach(function(book){
      */
 
 
+    function createBook(){
+        var titleInput, firstnameInput, lastNameInput
+        titleInput = prompt('what is the title of the book')
+        firstnameInput = prompt('what is the authors First Name');
+        lastNameInput = prompt('what is the authors Last Name');
+        books.push({title:titleInput,author:{firstName: firstnameInput,lastName: lastNameInput}})
 
 
+    }
+createBook()
 
+    function showBookInfo(indexL){
+        var fullName = books[indexL].author.firstName + ' ' + books[indexL].author.lastName
+        let bookNumber = parseFloat(indexL)+1
+        console.log('book #' + bookNumber)
+        console.log('title: '+ books[indexL].title)
+        console.log('author: '+ fullName)
+    }
+
+showBookInfo(prompt('which index would you like to go to?'))
 
 
 
