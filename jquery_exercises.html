@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Start of Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--    <script src="js/JqueryExercises.js"></script>-->
 </head>
+<h1> Im an H1 tag!</h1>
 <body>
-<a href="" id="pageLink">Link to nowhere</a>
+<a class="List1" id="pageLink">Link to nowhere</a>
 
     <ul>
         <li class="codeup"> Item 1</li>
@@ -15,21 +18,35 @@
         <li class="codeup"> Item 5</li>
     </ul>
 
-<div id="codeup"> </div>
+<div id="codeup"> Ive been put inside a div</div>
 
-<p class="latin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem blanditiis distinctio dolorem explicabo perspiciatis sequi sint, vero! Culpa harum illo itaque obcaecati quas quia sequi tempora ut voluptatem. Itaque, voluptates! </p>
-
-<script src="https://code.jquery.com/jquery=3.6.0.js"></script>
-
+<p id="Latin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem blanditiis distinctio dolorem explicabo perspiciatis sequi sint, vero! Culpa harum illo itaque obcaecati quas quia sequi tempora ut voluptatem. Itaque, voluptates! </p>
 <script>
-    "use strict";
-    window.onclick = function() {
-        alert('click!');
+    $('h1').click(function (e) {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        e.target.style.backgroundColor = '#' + randomColor
+    });
+    $('p').dblclick(function (e) {
+        e.target.style.fontSize = '30px';
+    });
+    function hoverIn (e){
+        var codeblock = e.target.nextElementSibling
+
     }
-$('.codeup').css("border","1px solid red")
+    function hoverOut (e){
+        var codeblock = e.target.nextElementSibling
+
+    }
+
+
+    $('article > h3').hover(hoverIn,hoverOut);
 
 
 </script>
+
+
+
+
 
 </body>
 </html>
