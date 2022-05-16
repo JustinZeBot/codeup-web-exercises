@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom-practice</title>
+
+</head>
+
+<body>
+<div>
+
+
+    <h3> here is some text</h3>
+
+        <input type="text" id="color" >
+        <button type="button" id="changeColor"> button </button>
+
+
+    <script>
+var button = document.getElementById("changeColor")
+var color = document.querySelector("#color")
+var body = document.querySelector("body")
+        function changeColor(){
+    body.style.backgroundColor = color.value
+        }
+    button.addEventListener("click",changeColor)
+    </script>
+</div>
+<!--create an HTML file called dom-practice.html in codeup-web-exercises repos.
+Put a text input on an html page with id of “color”
+Put a button on the page with id of “changeColor”
+Use an Event listener to trigger when the button is clicked.
+Use the value to change the background-color of the page to match the user’s input value.-->
+<div>
+
+
+<p id="doubleSize">
+    here is some text<br>
+    here is some text<br>
+    here is some more text<br>
+    <button id="getFont"> Click here to find the font size</button>
+</p>
+<script>
+
+function logFontSize(){
+var paragraph = document.querySelector('doubleSize')
+    paragraph.addEventListener('dbclick', function (event)
+})
+
+
+
+</script>
+
+</div>
+
+
+</body>
+</html>
