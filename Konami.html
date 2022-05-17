@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<img src="Codeup/images/DoomBackground.jpeg">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    "use strict";
+
+    // $(document).keydown(function(event){
+        // console.log(event.keyCode);
+    // });
+
+        let cheated = 0
+        let keys = {
+            37:"left",
+            38:"up",
+            39:"right",
+            40:"down",
+            65:"a",
+            66:"b",
+        }
+        let konamiCode = ["up","up","down","down","left","right","left","right","b","a"];
+
+        document.addEventListener("keydown", checkCode, false);
+        let keyCount=0;
+        function checkCode(event){
+            let keyPressed = keys[event.keyCode];
+
+
+            if(keyPressed === konamiCode[keyCount]){
+                keyCount++;
+                if (keyCount === konamiCode.length){
+                    cheatCodeActivated();
+                    resetKeyState();
+                }
+            }else{
+                resetKeyState();
+            }
+        }
+        function cheatCodeActivated(){
+
+            alert("You Are Dirty Cheater")
+            cheated = 1;
+        }
+
+        function resetKeyState(){
+            keyCount = 0;
+        }
+
+ 
+
+
+</script>
+</body>
+</html>
