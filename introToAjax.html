@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #murals-info {
+        margin: 10px auto;
+        border: 5px ridge blueviolet;
+        padding: 15px;
+        width: 25%;
+        text-align: center;
+    }
+    #murals-info:hover {
+        cursor: pointer;
+        background-color: aliceblue;
+    }
+    #card-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid darkgray;
+        padding: 5px;
+        width: 330px;
+    }
+</style>
+<body>
+
+<section id="murals-info">
+    <p>I want to know about murals</p>
+</section>
+<section id="card-section"></section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    $("#murals-info").click(function(){
+        $.ajax("/data/murals.json").done(function(data){
+            data.forEach(function(mural){
+                var title = '';
+                mural.artwork_title ? title = mural.artwork_title : title = "Untitled";
+                $("#card-section").append(
+                    '<article class="card">' +
+                    '<p>' + title + '</p>' +
+                    '<p>' + mural.artist_credit + '</p>' + '' +
+                    '</article>'
+                );
+            });
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
