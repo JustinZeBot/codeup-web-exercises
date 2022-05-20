@@ -4,28 +4,32 @@
     <title>Online Store</title>
 </head>
 <style>
-    .center{
-
-    }
     table{
         margin: 10px auto;
         border: 5px ridge blueviolet;
         padding: 15px;
         width: 25%;
         text-align: center;
+        background-color: white;
     }
     tr{
         margin: 10px auto;
-        border: 5px ridge blueviolet;
         padding: 15px;
         width: 25%;
         text-align: center;
+    }
+    th{
+        background-color: lightgray;
+
     }
     h1{
         text-align: center;
         margin: 10px auto;
         padding: 30px;
         font-size: 60px;
+    }
+    body{
+        background-color: tan;
     }
 </style>
 <body>
@@ -51,14 +55,14 @@
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
         $.ajax("/data/inventory.json").done(function(data){
-            data.forEach(function(inventory){
+            data.forEach(function(invetory){
 
                 $('#products').append(
                     '<tr>',    //creating a new row for each
-                    '<th>' + inventory.title + '</th>',
-                    '<th>' + inventory.quantity + '</th>',
-                    '<th>' + '$' +  inventory.price + '</th>',
-                    '<th>' +  inventory.categories + '</th>',
+                    '<th>' + invetory.title + '</th>',
+                    '<th>' + invetory.quantity + '</th>',
+                    '<th>' + '$' +  invetory.price + '</th>',
+                    '<th>' +  invetory.categories.join(", ") + '</th>',
                     '</tr>',
                 );
             });

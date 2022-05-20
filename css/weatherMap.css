@@ -1,0 +1,36 @@
+.title{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+html{
+    background-attachment: fixed;
+    background-image: url("https://cdn.abcotvs.com/dip/images/24996_kgo-windows-bliss-040714-1280.jpg?w=1600");
+}
+.all-Weather {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+
+}
+.indiv-Weather {
+    justify-content: center;
+    opacity: .7;
+    background-color: #8fafba;
+    width: 10%;
+    font-size: 25px;
+    display: flex;
+    flex: fit-content;
+    flex-direction: column;
+    margin: 5px;
+    /*background: #BFD45D;*/
+    border: 2px solid black;
+    padding: 2%;
+}
+.indiv-Weather p {
+    font-style: italic;
+}
+
+
+
