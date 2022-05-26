@@ -15,7 +15,7 @@ html{
     height: 40%;
 
 }
-.indiv-Weather {
+.foreCast {
     justify-content: center;
     opacity: .7;
     background-color: #8fafba;
@@ -29,7 +29,7 @@ html{
     border: 2px solid black;
     padding: 2%;
 }
-.indiv-Weather p {
+.foreCast p {
     font-style: italic;
 }
 .weatherMapBox {

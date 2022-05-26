@@ -27,7 +27,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     }
     console.log(formatTime(data.dt))
     //====
-    $("#current").append(
+    $("#foreCast").append(
         '<article>' +
         '<p>' + 'forecast for today' + '</p><hr>' +
         '<p>' + 'Current real temp' +'<br>' + data.current.temp +'\&#176 F' +  '</p><hr>' +
