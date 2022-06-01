@@ -27,46 +27,60 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     }
     console.log(formatTime(data.dt))
     //====
-    $("#foreCast").append(
-        '<article>' +
-        '<p>' + 'forecast for today' + '</p><hr>' +
-        '<p>' + 'Current real temp' +'<br>' + data.current.temp +'\&#176 F' +  '</p><hr>' +
-        '<p>'+ 'Feels Like' +'<br>'+ data.current.feels_like + '\&#176 F' + '</p><hr>' +
-        '<p>' + 'Average Humidity' +'<br>'+ '%' + data.current.humidity  + '</p>' +
-        '</article>'
-    )
-    $("#future1").append(
-        '<article>' +
-        '<p>' + 'Forecast in 2 days' + '</p><hr>' +
-        '<p>' + 'Day Temp' +'<br>' + data.daily[1].temp.day + '\&#176 F' +  '</p><hr>' +
-        '<p>'+ 'Eve Temp' +'<br>'+ data.daily[1].temp.eve + '\&#176 F' + '</p><hr>' +
-        '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[1].humidity  + '</p>' +
-        '</article>'
-    )
-    $("#future2").append(
-        '<article>' +
-        '<p>' + 'Forecast in 3 days' + '</p><hr>' +
-        '<p>' + 'Day Temp' +'<br>' + data.daily[2].temp.day + '\&#176 F' +  '</p><hr>' +
-        '<p>'+ 'Eve Temp' +'<br>'+ data.daily[2].temp.eve + '\&#176 F' + '</p><hr>' +
-        '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[2].humidity  + '</p>' +
-        '</article>'
-    )
-    $("#future3").append(
-        '<article>' +
-        '<p>' + 'Forecast in 4 days' + '</p><hr>' +
-        '<p>' + 'Day Temp' +'<br>' + data.daily[3].temp.day + '\&#176 F' +  '</p><hr>' +
-        '<p>'+ 'Eve Temp' +'<br>'+ data.daily[3].temp.eve + '\&#176 F' + '</p><hr>' +
-        '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[3].humidity  + '</p>' +
-        '</article>'
-    )
-    $("#future4").append(
-        '<article>' +
-        '<p>' + 'Forecast in 5 days' + '</p><hr>' +
-        '<p>' + 'Day Temp' +'<br>' + data.daily[4].temp.day + '\&#176 F' +  '</p><hr>' +
-        '<p>'+ 'Eve Temp' +'<br>'+ data.daily[4].temp.eve + '\&#176 F' + '</p><hr>' +
-        '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[4].humidity  + '</p>' +
-        '</article>'
-    )
+
+
+        //====
+    for (let i = 0; i < 5; i++) {
+        $("#foreCast").append(
+            '<article>'  +
+            '<p>' + 'forecast for today' + '</p><hr>' +
+            '<p>' + 'Current real temp' +'<br>' + data.daily[i].temp.day +'\&#176 F' +  '</p><hr>' +
+            '<p>'+ 'Feels Like' +'<br>'+ data.daily[i].temp.eve + '\&#176 F' + '</p><hr>' +
+            '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[i].humidity  + '</p>' +
+            '<br>' +
+            '</article>'
+        )
+    }
+    // $("#foreCast").append(
+    //     '<article>' +
+    //     '<p>' + 'forecast for today' + '</p><hr>' +
+    //     '<p>' + 'Current real temp' +'<br>' + data.daily[0].temp.day +'\&#176 F' +  '</p><hr>' +
+    //     '<p>'+ 'Feels Like' +'<br>'+ data.daily[0].temp.eve + '\&#176 F' + '</p><hr>' +
+    //     '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[0].humidity  + '</p>' +
+    //     '</article>'
+    // )
+    // $("#future1").append(
+    //     '<article>' +
+    //     '<p>' + 'Forecast in 2 days' + '</p><hr>' +
+    //     '<p>' + 'Day Temp' +'<br>' + data.daily[1].temp.day + '\&#176 F' +  '</p><hr>' +
+    //     '<p>'+ 'Eve Temp' +'<br>'+ data.daily[1].temp.eve + '\&#176 F' + '</p><hr>' +
+    //     '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[1].humidity  + '</p>' +
+    //     '</article>'
+    // )
+    // $("#future2").append(
+    //     '<article>' +
+    //     '<p>' + 'Forecast in 3 days' + '</p><hr>' +
+    //     '<p>' + 'Day Temp' +'<br>' + data.daily[2].temp.day + '\&#176 F' +  '</p><hr>' +
+    //     '<p>'+ 'Eve Temp' +'<br>'+ data.daily[2].temp.eve + '\&#176 F' + '</p><hr>' +
+    //     '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[2].humidity  + '</p>' +
+    //     '</article>'
+    // )
+    // $("#future3").append(
+    //     '<article>' +
+    //     '<p>' + 'Forecast in 4 days' + '</p><hr>' +
+    //     '<p>' + 'Day Temp' +'<br>' + data.daily[3].temp.day + '\&#176 F' +  '</p><hr>' +
+    //     '<p>'+ 'Eve Temp' +'<br>'+ data.daily[3].temp.eve + '\&#176 F' + '</p><hr>' +
+    //     '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[3].humidity  + '</p>' +
+    //     '</article>'
+    // )
+    // $("#future4").append(
+    //     '<article>' +
+    //     '<p>' + 'Forecast in 5 days' + '</p><hr>' +
+    //     '<p>' + 'Day Temp' +'<br>' + data.daily[4].temp.day + '\&#176 F' +  '</p><hr>' +
+    //     '<p>'+ 'Eve Temp' +'<br>'+ data.daily[4].temp.eve + '\&#176 F' + '</p><hr>' +
+    //     '<p>' + 'Average Humidity' +'<br>'+ '%' + data.daily[4].humidity  + '</p>' +
+    //     '</article>'
+    // )
 
 });
 
