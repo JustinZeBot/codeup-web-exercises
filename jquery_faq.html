@@ -56,20 +56,21 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 
-  $(function() {
     "use strict";
 
     // TODO: add jQuery such that when the link is clicked, the visibility of the dd elements will be toggled
 
-    $("#toggle-answers").click(function (){
-        $("dd").toggleClass('invisible');
-      });
-    $("dt").click(function (){
-      $(this).css('background','yellow')
-
+    $("button").click(function (){
+      $("li:last-child").css("background-color", "yellow");
     });
 
-  });
+    $("h3").on('click', function(){
+      $(this).next().children().css("font-weight", "bold");
+    });
+
+    $("li").on('click', function(){
+      $(this).siblings().first().css("color", "blue");
+    });
 
 </script>
 </body>

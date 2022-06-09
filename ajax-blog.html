@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog.ajax</title>
-    <link href="css/external_css.css"
+    <link href="css/external_css.css">
     <h1 class="welcome">Welcome to my Blog Page!</h1>
 </head>
     <body>
@@ -11,5 +11,19 @@
 
 
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $.get("/data/blog.json").done(function(data){
+                data.forEach(function(post){
+                    $("#posts").append(
+                        "<h2>" + post.title + "</h2>" +
+                        "<p>" + post.content + "</p>" +
+                        "<p>" + post.categories.join(', ') + "</p>" +
+                        "<p>" + post.date + "</p>"
+                    );
+                });
+            });
+        </script>
     </body>
 </html>
